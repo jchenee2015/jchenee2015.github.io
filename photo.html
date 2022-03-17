@@ -16,6 +16,61 @@
 
   gtag('config', 'UA-82826392-1');
 </script>
+
+<style>
+
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 5%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  padding: 20px;
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  color: blue;
+  font-size: 3;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+
 </head>
 
 <body>
@@ -40,130 +95,81 @@
 <h1>Photos</font></h1>
 </div>
 
-I shot with Canon EOS Rebel T5i EF-S, iPhones, and various Android phones. 
-<br />
+<p>I shot with Canon EOS Rebel T5i EF-S, iPhones, and various Android phones. </p>
+
+<font color="red">Click on the images to enlarge</font>
+</br>
+</br>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" width="500 pt">
+  </br>
+  <div id="imgtext">imgText</div>
+</div>
  
 <h2> Life </h2>
 
-<br />
-I have been there (as of June 2020)
-
-<br />
-<br />
-<img src="http://map1.maploco.com/visited-states/ml/CA-CO-DC-FL-IA-ID-IL-IN-KS-MI-MN-MO-MT-NE-NJ-NV-NY-OH-OR-SD-TX-UT-VA-WI-WY.png", width=550pt >
-
-<hr>
-<br />
-Run @ Ames, IA, 2011-2015
-
-<br />
-<br />
-<img src="pic/runAmes1.jpg", width=320pt >
-<img src="pic/runAmes2.jpg", width=300pt />
-
-<hr>
-<br />
-Run @ Idaho Falls, ID, 2015
-
-<br />
-<br />
-<img src="pic/runIFalls.jpg", width=550pt >
-
-<hr>
-<br />
-Coover Hall, Ames, IA (taken on Feburary 17, 2013), where I spent four years for my Ph.D. degree. 
-
-<br />
-<br />
-<img src="pic/CooverAmesIA.jpg", width=300pt >
-
-<hr>
-<br />
-First Pet, 2002-2015, (taken on June 2011). She was born and abandoned, while my older brother decided to bring her home. She had 3 (?) babies. 
-
-<br />
-<br />
-<img src="pic/firstpet.jpg", width=300pt >
-
-<hr>
-<br />
-Elliott Tower at Oakland University Campus, Rochester, MI (Taken on August 7, 2020). Auto processed and stylized by Google Photos. 
-
-<br />
-<br />
-<img src="pic/ElliottTowerOU.jpg", width=300pt >
+<!-- The photo columns -->
+<div class="row">
+  <div class="column">
+    <img src="http://map1.maploco.com/visited-states/ml/CA-CO-DC-FL-IA-ID-IL-IN-KS-MI-MN-MO-MT-NE-NJ-NV-NY-OH-OR-SD-TX-UT-VA-WI-WY.png.jpg" alt="I have been there (as of June 2020)" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/runAmes1.jpg" alt="Run @ Ames, IA, 2011-2015" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/runAmes2.jpg" alt="Run @ Ames, IA, 2011-2015" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/runIFalls.jpg" alt="Run @ Idaho Falls, ID, 2015" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/CooverAmesIA.jpg" alt="Coover Hall, Ames, IA (taken on Feburary 17, 2013), where I spent four years for my Ph.D. degree. " style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/firstpet.jpg" alt="First Pet, 2002-2015, (taken on June 2011). She was born and abandoned, while my older brother decided to bring her home. She had 3 (?) babies. " style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/ElliottTowerOU.jpg" alt="Elliott Tower at Oakland University Campus, Rochester, MI (Taken on August 7, 2020). Auto processed and stylized by Google Photos. " style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
 
 
+<h2> View and Plantings</h2>
 
-<br />
-<br />
-<h2> View </h2>
+<!-- The photo columns -->
+<div class="row">
+  <div class="column">
+    <img src="pic/LakeMendotaMadisonWI.jpg" alt="Lake Mendota, Madison, WI (taken on August 17, 2013), where 2013 IEEE CASE was held. It is taken by iPhone 4S running on iOS8.  " style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/FishingConeYellowstone.jpg" alt="Fishing Cone, Yellowstone National Park (taken on August 9, 2015)" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/MorningGloryYellowstone.jpg" alt="Morning Glory Pool, Yellowstone National Park (taken on August 9, 2015)" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/UpperMessaFalls.jpg" alt="Upper Mesa Falls, Idaho (taken on August 27, 2015)" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="pic/Daffodils2019.jpg" alt="Daffodils blossomed in spring 2019 in Michigan (taken on February 10, 2019). Auto processed and stylized by Google Photos. " style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/Daffodils2020-1.jpg" alt="Daffodils blossomed in spring 2020 in Michigan (taken on January 25, 2020). " style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="pic/Daffodils2020-2.jpg" alt="Daffodils blossomed in spring 2020 in Michigan (taken on January 25, 2020). " style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic/PhaOrchidClivia2020.jpg" alt="Phalaenopsis orchid and clivia blossomed in spring 2020 in Michigan (taken on March 14, 2020). " style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
 
-<br />
-Lake Mendota, Madison, WI (taken on August 17, 2013), where 2013 IEEE CASE was held. It is taken by iPhone 4S running on iOS8.  
 
-<br />
-<br />
-<img src="pic/LakeMendotaMadisonWI.jpg", width=550pt >
 
-<hr>
-<br />
-Fishing Cone, Yellowstone National Park (taken on August 9, 2015)
-
-<br />
-<br />
-<img src="pic/FishingConeYellowstone.jpg", width=550pt >
-
-<hr>
-<br />
-Morning Glory Pool, Yellowstone National Park (taken on August 9, 2015)
-
-<br />
-<br />
-<img src="pic/MorningGloryYellowstone.jpg", width=550pt >
-
-<hr>
-<br />
-Upper Mesa Falls, Idaho (taken on August 27, 2015)
-
-<br />
-<br />
-<img src="pic/UpperMessaFalls.jpg", width=550pt >
-
-<br />
-<br />
-
-<h2> Plantings </h2>
-
-<br />
-Daffodils blossomed in spring 2019 in Michigan (taken on February 10, 2019). Auto processed and stylized by Google Photos. 
-
-<br />
-<br />
-<img src="pic/Daffodils2019.jpg", width=300pt >
-
-<hr>
-<br />
-
-Daffodils blossomed in spring 2020 in Michigan (taken on January 25, 2020). 
-
-<br />
-<br />
-<img src="pic/Daffodils2020-1.jpg", width=550pt >
-
-<br />
-<br />
-
-<img src="pic/Daffodils2020-2.jpg", width=550pt >
-
-<hr>
-<br />
-
-Phalaenopsis orchid and clivia blossomed in spring 2020 in Michigan (taken on March 14, 2020). 
-
-<br />
-<br />
-<img src="pic/PhaOrchidClivia2020.jpg", width=550pt >
 
 <br />
 <br />
@@ -179,5 +185,16 @@ Page generated by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </td>
 </tr>
 </table>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
 </body>
 </html>
